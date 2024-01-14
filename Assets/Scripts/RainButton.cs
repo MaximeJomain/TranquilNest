@@ -8,16 +8,18 @@ using UnityEngine.Serialization;
 
 public class RainButton : MonoBehaviour
 {
-    [FormerlySerializedAs("rainParticleSystem")]
-    public ParticleSystem rainPS;
-    public AudioSource audioRain, audioDefault;
     public Material rainSkybox;
     
+    private ParticleSystem rainPS;
+    private AudioSource audioRain, audioDefault;
     private Material defaultSkybox;
 
     private void Awake()
     {
         defaultSkybox = RenderSettings.skybox;
+        rainPS = GameObject.Find("Particles/Rain").GetComponent<ParticleSystem>();
+        audioRain = GameObject.Find("Audio Rain").GetComponent<AudioSource>();
+        audioDefault = GameObject.Find("Audio Default").GetComponent<AudioSource>();
     }
 
     public void TriggerRainWeather()
