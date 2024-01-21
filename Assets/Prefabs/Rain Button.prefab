@@ -132,7 +132,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8438823897769396873}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.694573, z: -0, w: 0.7194222}
+  m_LocalRotation: {x: 0, y: 0.6945705, z: 0, w: 0.7194247}
   m_LocalPosition: {x: -4.775981, y: 3.5810013, z: -12.508564}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -244,4 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014ad00e3260b1349a6b76f3539f11c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rainSkybox: {fileID: 2100000, guid: d4e34faecb9b9564e941b0a4236003c7, type: 2}
+  rainSkybox: {fileID: 2100000, guid: f2b5f3f20933f434e850db1b710542fd, type: 2}
+  fogDensity: 0.02
+  lightIntensity: 0.25
