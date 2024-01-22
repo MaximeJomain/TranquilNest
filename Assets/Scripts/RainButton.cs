@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Serialization;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class RainButton : MonoBehaviour
 {
@@ -20,7 +20,8 @@ public class RainButton : MonoBehaviour
     private float defaultLight;
     private Light directLight;
     private bool weatherToggle;
-    public Image test;
+    [SerializeField]
+    public Image background;
     public Sprite rainLogo;
     public Sprite sunLogo;
 
@@ -68,18 +69,15 @@ public class RainButton : MonoBehaviour
 
     public void ChangeBackground()
     {
+        Debug.Log(background, this);
 
         if (weatherToggle)
         {
-            print("TRUE");
-            // theToggle.image = Background1;
-          //  test.sprite = rainLogo;
+            background.sprite = rainLogo;
         }
         else
         {
-            print("FALSE");
-          //  test.sprite = sunLogo;
-            // theToggle.image = Background2;
+            background.sprite = sunLogo;
         }
     }
 }
