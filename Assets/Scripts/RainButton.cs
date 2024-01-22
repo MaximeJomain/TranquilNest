@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -36,7 +37,12 @@ public class RainButton : MonoBehaviour
         audioDefault = GameObject.Find("Audio Default").GetComponent<AudioSource>();
     }
 
-    public void TriggerRainWeather()
+
+    void Start()
+    {
+        StartCoroutine(TriggerRainWeather());
+    }
+    IEnumerator TriggerRainWeather()
     {
         weatherToggle = !weatherToggle;
         ChangeBackground();
@@ -53,6 +59,8 @@ public class RainButton : MonoBehaviour
             audioDefault.Stop();
             audioRain.Play();
             rainPS.Play();
+            yield return new WaitForSeconds(2);
+
         }
         // Rain Off
         else
@@ -64,6 +72,7 @@ public class RainButton : MonoBehaviour
             audioRain.Stop();
             rainPS.Stop();
             audioDefault.Play();
+            yield return new WaitForSeconds(2);
         }
     }
 
