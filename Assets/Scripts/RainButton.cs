@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Serialization;
+using UnityEngine.UIElements;
 
 public class RainButton : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class RainButton : MonoBehaviour
     private float defaultFog;
     private float defaultLight;
     private Light directLight;
+    private bool weatherToggle;
+    public Image test;
+    public Sprite rainLogo;
+    public Sprite sunLogo;
 
     private void Awake()
     {
@@ -32,6 +37,8 @@ public class RainButton : MonoBehaviour
 
     public void TriggerRainWeather()
     {
+        weatherToggle = !weatherToggle;
+        ChangeBackground();
         // Rain On
         if (RenderSettings.skybox == defaultSkybox
             && !audioRain.isPlaying
@@ -56,6 +63,23 @@ public class RainButton : MonoBehaviour
             audioRain.Stop();
             rainPS.Stop();
             audioDefault.Play();
+        }
+    }
+
+    public void ChangeBackground()
+    {
+
+        if (weatherToggle)
+        {
+            print("TRUE");
+            // theToggle.image = Background1;
+          //  test.sprite = rainLogo;
+        }
+        else
+        {
+            print("FALSE");
+          //  test.sprite = sunLogo;
+            // theToggle.image = Background2;
         }
     }
 }
