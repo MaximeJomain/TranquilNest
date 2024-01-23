@@ -37,10 +37,15 @@ public class RainButton : MonoBehaviour
         audioDefault = GameObject.Find("Audio Default").GetComponent<AudioSource>();
     }
 
+    private void Update()
+    {
+        ChangeBackground();
+    }
+
     public void TriggerRainWeather()
     {
-        weatherToggle = !weatherToggle; 
-        ChangeBackground();        
+     //   weatherToggle = !weatherToggle; 
+            
         
         // Rain On
         if (RenderSettings.skybox == defaultSkybox
@@ -48,6 +53,7 @@ public class RainButton : MonoBehaviour
             && !rainPS.isPlaying
             && audioDefault.isPlaying)
         {
+            weatherToggle = true;
             RenderSettings.skybox = rainSkybox;
             RenderSettings.fogDensity = fogDensity;
             directLight.intensity = lightIntensity;
@@ -60,6 +66,7 @@ public class RainButton : MonoBehaviour
         // Rain Off
         else
         {
+            weatherToggle = false;
             RenderSettings.skybox = defaultSkybox;
             RenderSettings.fogDensity = defaultFog;
             directLight.intensity = defaultLight;
@@ -72,8 +79,6 @@ public class RainButton : MonoBehaviour
 
     public void ChangeBackground()
     {
-        Debug.Log(background, this);
-
         if (weatherToggle)
         {
             background.sprite = rainLogo;

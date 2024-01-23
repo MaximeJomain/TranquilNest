@@ -9,39 +9,39 @@ public class BackgroundMusicPlayer : MonoBehaviour
     AudioSource backgroundMusic;
     private bool isPlaying;
     [SerializeField]
-    public Image logo;
+    public Image playerButton;
     public Sprite pauseLogo, playLogo;
-    public Slider volum;
-    public Text volumSum;
+    public Slider musicVolume;
+    public Text volumeText;
 
     // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        TriggerMusicPlayer();
+        backgroundMusic = GameObject.Find("Audio Background").GetComponent<AudioSource>();
     }
 
     public void TriggerMusicPlayer()
     {
-        Debug.Log("clic" + logo);
         isPlaying = !isPlaying;
 
-        if(isPlaying && backgroundMusic.isPlaying)
+        if(isPlaying)
         {
             backgroundMusic.Play();
-            logo.sprite = pauseLogo;
-
-        } else
+            playerButton.sprite = pauseLogo;
+        } 
+        else
         {
-            backgroundMusic.Stop();
-            logo.sprite = playLogo;
+           backgroundMusic.Pause();
+            playerButton.sprite = playLogo;
         }
 
+    }
+
+    public void OnVolumeChange()
+    {
+        Debug.Log(musicVolume.value);
+        musicVolume.value  = backgroundMusic.volume;
+        volumeText.text = backgroundMusic.volume + "%";
     }
 
 }
