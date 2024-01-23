@@ -23,8 +23,8 @@ public class RainButton : MonoBehaviour
     private bool weatherToggle;
     [SerializeField]
     public Image background;
-    public Sprite rainLogo;
-    public Sprite sunLogo;
+    public Sprite rainLogo, sunLogo;
+    
 
     private void Awake()
     {
@@ -37,15 +37,11 @@ public class RainButton : MonoBehaviour
         audioDefault = GameObject.Find("Audio Default").GetComponent<AudioSource>();
     }
 
-
-    void Start()
+    public void TriggerRainWeather()
     {
-        StartCoroutine(TriggerRainWeather());
-    }
-    IEnumerator TriggerRainWeather()
-    {
-        weatherToggle = !weatherToggle;
-        ChangeBackground();
+        weatherToggle = !weatherToggle; 
+        ChangeBackground();        
+        
         // Rain On
         if (RenderSettings.skybox == defaultSkybox
             && !audioRain.isPlaying
@@ -59,7 +55,6 @@ public class RainButton : MonoBehaviour
             audioDefault.Stop();
             audioRain.Play();
             rainPS.Play();
-            yield return new WaitForSeconds(2);
 
         }
         // Rain Off
@@ -72,7 +67,6 @@ public class RainButton : MonoBehaviour
             audioRain.Stop();
             rainPS.Stop();
             audioDefault.Play();
-            yield return new WaitForSeconds(2);
         }
     }
 
