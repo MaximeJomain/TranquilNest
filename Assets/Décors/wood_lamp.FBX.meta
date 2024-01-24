@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1e82a85d6bd0ecc44b822b8957a858ff
+guid: 12105b66b4a1019438f98218a521a091
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,28 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Black_vase
-    second: {fileID: 2100000, guid: 3af3cb36aea03e04d9c3df4e21109281, type: 2}
+      name: 16 - VRay Material
+    second: {fileID: 2100000, guid: 4b11eee28cf98004799347721de5a3fb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Flower
-    second: {fileID: 2100000, guid: 1fb953a2ba758304983861482fb1467f, type: 2}
+      name: Led
+    second: {fileID: 2100000, guid: 858b9b82f7af64244962f5fe738c3b4f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Leaf
-    second: {fileID: 2100000, guid: a8a16740c6557514b8b5eb02d78609f2, type: 2}
+      name: Parlak Siyah
+    second: {fileID: 2100000, guid: d47c15d1c6939dd4a9f1d35236595275, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Plane
-    second: {fileID: 2100000, guid: b025a831e1262944a9bbd6db08f402e6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Wood
-    second: {fileID: 2100000, guid: ecb4289b9d5bc1143b00bface2eca3c8, type: 2}
+      name: re
+    second: {fileID: 2100000, guid: b05da215a237e2d4fb068ca79e5b29b6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
