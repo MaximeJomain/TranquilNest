@@ -45,7 +45,6 @@ public class BackgroundMusicPlayer : MonoBehaviour
     public void OnVolumeChange(float number)
     {
         Debug.Log(backgroundMusic.volume + " : background ");
-        Debug.Log( number + " : NUMBER ");
 
         backgroundMusic.volume = number;
         volumeText.text = number + "%";
