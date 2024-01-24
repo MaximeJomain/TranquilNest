@@ -14,6 +14,7 @@ public class BackgroundMusicPlayer : MonoBehaviour
     public Slider musicVolume;
     public Text volumeText;
 
+
     // Start is called before the first frame update
     public void Awake()
     {
@@ -37,11 +38,10 @@ public class BackgroundMusicPlayer : MonoBehaviour
 
     }
 
-    public void OnVolumeChange()
+    public void OnVolumeChange(float number)
     {
-        Debug.Log(musicVolume.value);
-        musicVolume.value  = backgroundMusic.volume;
-        volumeText.text = backgroundMusic.volume + "%";
+        backgroundMusic.volume = number;
+        volumeText.text = number + "%";
     }
 
 }
