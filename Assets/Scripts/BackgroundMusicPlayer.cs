@@ -19,8 +19,10 @@ public class BackgroundMusicPlayer : MonoBehaviour
     public void Awake()
     {
         backgroundMusic = GameObject.Find("Audio Background").GetComponent<AudioSource>();
+        musicVolume = gameObject.GetComponent<Slider>();
 
         backgroundMusic.volume = 0.5f;
+        musicVolume.value = backgroundMusic.volume;
     }
 
     public void TriggerMusicPlayer()
