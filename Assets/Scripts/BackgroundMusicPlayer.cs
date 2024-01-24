@@ -19,6 +19,8 @@ public class BackgroundMusicPlayer : MonoBehaviour
     public void Awake()
     {
         backgroundMusic = GameObject.Find("Audio Background").GetComponent<AudioSource>();
+
+        backgroundMusic.volume = 0.5f;
     }
 
     public void TriggerMusicPlayer()
@@ -32,7 +34,7 @@ public class BackgroundMusicPlayer : MonoBehaviour
         } 
         else
         {
-           backgroundMusic.Pause();
+            backgroundMusic.Pause();
             playerButton.sprite = playLogo;
         }
 
@@ -40,6 +42,9 @@ public class BackgroundMusicPlayer : MonoBehaviour
 
     public void OnVolumeChange(float number)
     {
+        Debug.Log(backgroundMusic.volume + " : background ");
+        Debug.Log( number + " : NUMBER ");
+
         backgroundMusic.volume = number;
         volumeText.text = number + "%";
     }
