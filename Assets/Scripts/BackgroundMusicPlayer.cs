@@ -29,6 +29,11 @@ public class BackgroundMusicPlayer : MonoBehaviour
         volumeText.text = backgroundMusic.volume + "%";
     }
 
+    private void Start()
+    {
+        backgroundMusic.Stop();
+    }
+
     private void Update()
     {
         backgroundMusic.volume = linearMapping.value;
