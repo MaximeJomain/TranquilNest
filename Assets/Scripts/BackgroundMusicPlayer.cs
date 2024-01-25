@@ -27,8 +27,11 @@ public class BackgroundMusicPlayer : MonoBehaviour
 
         musicVolumeSlider.value = backgroundMusic.volume;
         volumeText.text = backgroundMusic.volume + "%";
-        linearMapping.value = 0.5f;
-        backgroundMusic.volume = 0.5f;
+    }
+
+    private void Start()
+    {
+        backgroundMusic.Stop();
     }
 
     private void Update()
