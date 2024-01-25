@@ -18,6 +18,8 @@ public class MeditationButton : MonoBehaviour
     [SerializeField]
     private TMP_Text m_InstructionText;
 
+    private bool isPlaying;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,10 +68,15 @@ public class MeditationButton : MonoBehaviour
     public void Start360Video()
     {
         SceneManager.LoadScene("360° Scene");
-    } 
+    }
 
 
-     IEnumerator WaitNextText(string text)
+    public void BackToMainScene()
+    {
+        SceneManager.LoadScene("Main Scene");
+    }
+
+    IEnumerator WaitNextText(string text)
     {
         yield return new WaitForSeconds(6.0f);
         m_InstructionText.text = text;

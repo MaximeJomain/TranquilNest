@@ -3714,7 +3714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 90941af5d0209d44fb7a271fb9d0b24d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12229,16 +12229,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843833711}
-  m_LocalRotation: {x: -0, y: 1, z: 0.0000000074505797, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0966567, y: 1.5149999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1178990615}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -121.2, y: -0}
+  m_AnchoredPosition: {x: -124.9, y: 0}
   m_SizeDelta: {x: 81, y: 153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &1843833713
@@ -12418,7 +12418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dbc16a7f3fe83c74291c9291374eb5ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13356,13 +13356,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001207862}
-  m_LocalRotation: {x: -0, y: 1, z: 0.0000000074505797, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1.0966567, y: 1.5149999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1178990615}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 93.8, y: 0}
@@ -13545,7 +13545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ca4019f2614a2e3478474ce280ba4a43, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14676,13 +14676,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a63a548a80d864c449dac9251c6908b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusic: {fileID: 996790240}
   playerButton: {fileID: 1959236466}
   pauseLogo: {fileID: 21300000, guid: 867e33100e506054cbf1b22d8c80bf46, type: 3}
   playLogo: {fileID: 21300000, guid: 0fa17d220f6608f4995f527f3fb5e001, type: 3}
   musicVolume: {fileID: 1467656566}
   volumeText: {fileID: 1404353352}
-  linearMapping: {fileID: 1852076822}
 --- !u!1001 &2117593227
 PrefabInstance:
   m_ObjectHideFlags: 0
