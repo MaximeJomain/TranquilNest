@@ -1,28 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Valve.VR.InteractionSystem;
 
 public class BackgroundMusicPlayer : MonoBehaviour
 {
 
-    AudioSource backgroundMusic;
+    public AudioSource backgroundMusic;
     private bool isPlaying;
     [SerializeField]
     public Image playerButton;
     public Sprite pauseLogo, playLogo;
     public Slider musicVolume;
     public Text volumeText;
+    public LinearMapping linearMapping;
+
+    private Slider musicVolumeSlider;
 
 
     // Start is called before the first frame update
     public void Awake()
     {
-        backgroundMusic = GameObject.Find("Audio Background").GetComponent<AudioSource>();
-        musicVolume = gameObject.GetComponent<Slider>();
+        musicVolumeSlider = musicVolume.GetComponent<Slider>();
 
-        backgroundMusic.volume = 0.5f;
-        musicVolume.value = backgroundMusic.volume;
+        musicVolumeSlider.value = backgroundMusic.volume;
+        volumeText.text = backgroundMusic.volume + "%";
+    }
+
+    private void Update()
+    {
+        backgroundMusic.volume = linearMapping.value;
+        int volume = Mathf.RoundToInt(linearMapping.value * 100);
+        volumeText.text = volume + "%";
     }
 
     public void TriggerMusicPlayer()
@@ -42,12 +53,11 @@ public class BackgroundMusicPlayer : MonoBehaviour
 
     }
 
-    public void OnVolumeChange(float number)
-    {
-        Debug.Log(backgroundMusic.volume + " : background ");
-
-        backgroundMusic.volume = number;
-        volumeText.text = number + "%";
-    }
+    // public void OnVolumeChange(float number)
+    // {
+    //     int numberInt = Mathf.RoundToInt(number);
+    //     backgroundMusic.volume = number;
+    //     volumeText.text = numberInt * 100 + "%";
+    // }
 
 }
